@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ALTTP Menu Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item y-items">
+            <table class="y-items-table">
+                <tr>
+                    <td><img id="bow" class="item y" src="res/items/bow-0.png" alt="bow" onclick="toggle('bow')" data-max-state="2"></td>
+                    <td><img id="boomerang" class="item y" src="res/items/boomerang-0.png" alt="boomerang" onclick="toggle('boomerang')" data-max-state="3"></td>
+                    <td><img id="hookshot" class="item y" src="res/items/hookshot.png" alt="hookshot" onclick="toggle('hookshot')" data-max-state="1"></td>
+                    <td><img id="bomb" class="item y" src="res/items/bomb.png" alt="bomb" onclick="toggle('bomb')" data-max-state="1"></td>
+                    <td><img id="mushpowder" class="item y" src="res/items/mushpowder-0.png" alt="mushpowder" onclick="toggle('mushpowder')" data-max-state="3"></td>
+                </tr>
+                <tr>
+                    <td><img id="firerod" class="item y" src="res/items/firerod.png" alt="firerod" onclick="toggle('firerod')" data-max-state="1"></td>
+                    <td><img id="icerod" class="item y" src="res/items/icerod.png" alt="icerod" onclick="toggle('icerod')" data-max-state="1"></td>
+                    <td><img id="bombos" class="item y" src="res/items/bombos.png" alt="bombos" onclick="toggle('bombos')" data-max-state="1"></td>
+                    <td><img id="ether" class="item y" src="res/items/ether.png" alt="ether" onclick="toggle('ether')" data-max-state="1"></td>
+                    <td><img id="quake" class="item y" src="res/items/quake.png" alt="quake" onclick="toggle('quake')" data-max-state="1"></td>
+                </tr>
+                <tr>
+                    <td><img id="lamp" class="item y" src="res/items/lamp.png" alt="lamp" onclick="toggle('lamp')" data-max-state="1"></td>
+                    <td><img id="hammer" class="item y" src="res/items/hammer.png" alt="hammer" onclick="toggle('hammer')" data-max-state="1"></td>
+                    <td><img id="shovelflute" class="item y" src="res/items/shovelflute-0.png" alt="shovelflute" onclick="toggle('shovelflute')" data-max-state="3"></td>
+                    <td><img id="net" class="item y" src="res/items/net.png" alt="net" onclick="toggle('net')" data-max-state="1"></td>
+                    <td><img id="book" class="item y" src="res/items/book.png" alt="book" onclick="toggle('book')" data-max-state="1"></td>
+                </tr>
+                <tr>
+                    <td><img id="bottle" class="item y" src="res/items/bottle-0.png" alt="bottle" onclick="toggle('bottle')" data-max-state="4"></td>
+                    <td><img id="somaria" class="item y" src="res/items/somaria.png" alt="somaria" onclick="toggle('somaria')" data-max-state="1"></td>
+                    <td><img id="byrna" class="item y" src="res/items/byrna.png" alt="byrna" onclick="toggle('byrna')" data-max-state="1"></td>
+                    <td><img id="cape" class="item y" src="res/items/cape.png" alt="cape" onclick="toggle('cape')" data-max-state="1"></td>
+                    <td><img id="mirror" class="item y" src="res/items/mirror.png" alt="mirror" onclick="toggle('mirror')" data-max-state="1"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="grid-item a-items">
+            <table class="a-items-table">
+                <tr>
+                    <td><img id="boots" class="item a" src="res/items/boots.png" alt="boots" onclick="toggle('boots')" data-max-state="1"></td>
+                    <td><img id="glove" class="item a" src="res/items/glove-0.png" alt="glove" onclick="toggle('glove')" data-max-state="2"></td>
+                    <td><img id="flippers" class="item a" src="res/items/flippers.png" alt="flippers" onclick="toggle('flippers')" data-max-state="1"></td>
+                    <td><img id="pearl" class="item a" src="res/items/pearl.png" alt="pearl" onclick="toggle('pearl')" data-max-state="1"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="grid-item go">
+            <img id="gomode" class="item gomode" src="res/items/gomode.png" alt="gomode" onclick="toggle('gomode')" data-max-state="1">
+        </div>
+
+        <div class="grid-item aga">
+            <img id="aga-img" class="aga-img" src="res/other/aga.png" alt="aga-img" onclick="toggleAga()" data-state="0">
+        </div>
+
+        <div class="grid-item equipment">
+            <table class="equipment-table">
+                <tr>
+                    <td><img id="sword" class="item equip" src="res/items/sword-0.png" alt="sword" onclick="toggle('sword')" data-max-state="4"></td>
+                    <td><img id="shield" class="item equip" src="res/items/shield-0.png" alt="shield" onclick="toggle('shield')" data-max-state="3"></td>
+                    <td><img id="mail" class="item-nodim equip" src="res/items/mail-0.png" alt="mail" onclick="toggleNoDim('mail')" data-max-state="2"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><img id="heartpiece" class="item-nodim heartpiece" src="res/items/heartpiece-0.png" alt="heartpiece" onclick="toggleNoDim('heartpiece')" data-max-state="3"></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="grid-item dungeons">
+            <table class="dungeons-table">
+                <tr>
+                    <td><p onclick="togglePrize('ep')">EP</p></td>
+                    <td><p onclick="togglePrize('dp')">DP</p></td>
+                    <td><p onclick="togglePrize('toh')">ToH</p></td>
+                    <td><p onclick="togglePrize('pod')">PoD</p></td>
+                    <td><p onclick="togglePrize('sp')">SP</p></td>
+                    <td><p onclick="togglePrize('sw')">SW</p></td>
+                    <td><p onclick="togglePrize('tt')">TT</p></td>
+                    <td><p onclick="togglePrize('ip')">IP</p></td>
+                    <td><p onclick="togglePrize('mm')">MM</p></td>
+                    <td><p onclick="togglePrize('tr')">TR</p></td>
+                </tr>
+                <tr>
+                    <td><img id="ep" class="prize" src="res/prize/prize-0.png" alt="ep" onclick="toggleComplete('ep')"></td>
+                    <td><img id="dp" class="prize" src="res/prize/prize-0.png" alt="ep" onclick="toggleComplete('dp')"></td>
+                    <td><img id="toh" class="prize" src="res/prize/prize-0.png" alt="ep" onclick="toggleComplete('toh')"></td>
+                    <td><img id="pod" class="prize" src="res/prize/prize-0.png" alt="ep" onclick="toggleComplete('pod')"></td>
+                    <td><img id="sp" class="prize" src="res/prize/prize-0.png" alt="ep" onclick="toggleComplete('sp')"></td>
+                    <td><img id="sw" class="prize" src="res/prize/prize-0.png" alt="ep" onclick="toggleComplete('sw')"></td>
+                    <td><img id="tt" class="prize" src="res/prize/prize-0.png" alt="ep" onclick="toggleComplete('tt')"></td>
+                    <td><img id="ip" class="prize" src="res/prize/prize-0.png" alt="ep" onclick="toggleComplete('ip')"></td>
+                    <td><img id="mm" class="prize" src="res/prize/prize-0.png" alt="ep" onclick="toggleComplete('mm')"></td>
+                    <td><img id="tr" class="prize" src="res/prize/prize-0.png" alt="ep" onclick="toggleComplete('tr')"></td>
+                </tr>
+                <tr>
+                    <td><img id="ep-chest" class="chest" src="res/chest/chest-3.png" alt="ep-chest" onclick="toggleChest('ep-chest')" data-max-state="3"></td>
+                    <td><img id="dp-chest" class="chest" src="res/chest/chest-2.png" alt="dp-chest" onclick="toggleChest('dp-chest')" data-max-state="2"></td>
+                    <td><img id="toh-chest" class="chest" src="res/chest/chest-2.png" alt="toh-chest" onclick="toggleChest('toh-chest')" data-max-state="2"></td>
+                    <td><img id="pod-chest" class="chest" src="res/chest/chest-5.png" alt="pod-chest" onclick="toggleChest('pod-chest')" data-max-state="5"></td>
+                    <td><img id="sp-chest" class="chest" src="res/chest/chest-6.png" alt="sp-chest" onclick="toggleChest('sp-chest')" data-max-state="6"></td>
+                    <td><img id="sw-chest" class="chest" src="res/chest/chest-2.png" alt="sw-chest" onclick="toggleChest('sw-chest')" data-max-state="2"></td>
+                    <td><img id="tt-chest" class="chest" src="res/chest/chest-4.png" alt="tt-chest" onclick="toggleChest('tt-chest')" data-max-state="4"></td>
+                    <td><img id="ip-chest" class="chest" src="res/chest/chest-3.png" alt="ip-chest" onclick="toggleChest('ip-chest')" data-max-state="3"></td>
+                    <td><img id="mm-chest" class="chest" src="res/chest/chest-2.png" alt="mm-chest" onclick="toggleChest('mm-chest')" data-max-state="2"></td>
+                    <td><img id="tr-chest" class="chest" src="res/chest/chest-5.png" alt="tr-chest" onclick="toggleChest('tr-chest')" data-max-state="5"></td>
+                </tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><img id="mm-medallion" class="medallion" src="res/medallion/medallion-0.png" alt="mm-medallion" onclick="toggleMedallion('mm-medallion')"></td>
+                    <td><img id="tr-medallion" class="medallion" src="res/medallion/medallion-0.png" alt="tr-medallion" onclick="toggleMedallion('tr-medallion')"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>init();</script>
+</body>
+</html>

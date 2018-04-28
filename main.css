@@ -2,10 +2,161 @@ body {
     background-color: black;
 }
 
+.grid-container {
+    display: grid;
+    grid-gap: 10px;
+}
+
 img {
     user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+}
+
+.y-items {
+    width: 300px;
+    grid-column: 1;
+    grid-row: 1 / span 4;
+}
+
+.y-items-table {
+    width: 100%;
+    margin: 6px;
+    border-spacing: 6px;
+    border-image-source: url(res/borders/y-items-border.png);
+    border-image-slice: 25%;
+    border-image-width: 12px;
+    border-image-outset: 10px;
+    border-image-repeat: round;
+}
+
+.y, .a {
+    height: 80%;
+    width: 80%;
+}
+
+.y-items td, .a-items td .equipment td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.a-items {
+    width: 300px;
+    grid-column: 1;
+    grid-row: 5;
+}
+
+.a-items-table {
+    width: 100%;
+    margin: 6px;
+    border-spacing: 18px 6px;
+    border-image-source: url(res/borders/a-items-border.png);
+    border-image-slice: 25%;
+    border-image-width: 12px;
+    border-image-outset: 10px;
+    border-image-repeat: round;
+}
+
+.dungeons {
+    width: 100%;
+    grid-column: 1 / span 2;
+    grid-row: 6;
+}
+
+.dungeons-table {
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.dungeons-table td {
+    width: 40px;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+    text-align: center;
+    font-size: 15pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    vertical-align: middle;
+    color: white;
+    font-style: italic;
+}
+
+.dungeons-table td:first-child {
+    border-left: none;
+}
+
+.dungeons-table p {
+    margin: 3px 0px;
+    width: 40px;
+}
+
+.prize {
+    width: 70%;
+}
+
+.chest {
+    width: 70%;
+}
+
+.medallion {
+    width: 70%;
+}
+
+.go {
+    grid-column: 2;
+    grid-row: 1 / span 1;
+    margin-top: 20px;
+    margin-left: 33px;
+}
+
+.gomode {
+    width: 50px;
+    height: 50px;
+}
+
+.aga {
+    grid-column: 2;
+    grid-row: 2 / span 1;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.aga-img {
+    width: 75px;
+    height: 96px;
+}
+
+.equipment {
+    width: 110px;
+    grid-column: 2;
+    grid-row: 3 / span 3;
+}
+
+.equipment-table {
+    width: 100%;
+    margin: 6px;
+    margin-top: 20px;
+    border-spacing: 0px;
+    border-image-source: url(res/borders/equipment-border.png);
+    border-image-slice: 25%;
+    border-image-width: 12px;
+    border-image-outset: 10px;
+    border-image-repeat: round;
+    align-content: center;
+}
+
+.equipment-table td {
+    width: 32px;
+}
+
+.equip {
+    width: 100%;
+}
+
+.heartpiece {
+    width: 100%;
 }
