@@ -109,8 +109,8 @@ img {
 .go {
     grid-column: 2;
     grid-row: 1 / span 1;
-    margin-top: 20px;
-    margin-left: 33px;
+    margin-top: 10px;
+    margin-left: 51px;
 }
 
 .gomode {
@@ -122,7 +122,7 @@ img {
     grid-column: 2;
     grid-row: 2 / span 1;
     margin-top: 10px;
-    margin-left: 20px;
+    margin-left: 38px;
 }
 
 .aga-img {
@@ -131,7 +131,7 @@ img {
 }
 
 .equipment {
-    width: 110px;
+    width: 140px;
     grid-column: 2;
     grid-row: 3 / span 3;
 }
@@ -140,17 +140,13 @@ img {
     width: 100%;
     margin: 6px;
     margin-top: 20px;
-    border-spacing: 0px;
+    border-spacing: 7px 3px;
     border-image-source: url(res/borders/equipment-border.png);
     border-image-slice: 25%;
     border-image-width: 12px;
     border-image-outset: 10px;
     border-image-repeat: round;
     align-content: center;
-}
-
-.equipment-table td {
-    width: 32px;
 }
 
 .equip {
