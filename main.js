@@ -114,6 +114,13 @@ function toggleAga() {
 }
 
 function init() {
+
+    var els = document.getElementsByTagName("img");
+    for (let i = 0; i < els.length; i++) {
+        els[i].setAttribute("draggable", "false");
+        els[i].setAttribute("ondragstart", "return false;");
+    }
+
     var els = document.getElementsByClassName("item");
     for (let i = 0; i < els.length; i++) {
         els[i].style.opacity = 0.13;

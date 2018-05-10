@@ -8,6 +8,7 @@ body {
 }
 
 img {
+    -khtml-user-drag: none;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
@@ -83,15 +84,6 @@ img {
     vertical-align: middle;
     color: white;
     font-style: italic;
-}
-
-.dungeons-table td:first-child {
-    border-left: none;
-}
-
-.dungeons-table p {
-    margin: 3px 0px;
-    width: 40px;
 }
 
 .prize {
