@@ -8,14 +8,14 @@
 </head>
 <body>
 
-        <p>Base resolution (px): 490x480</p>
+        <p>Base resolution (px): 500x500</p>
         <p>Zoom (%): <input type="number" id="zoom" min="1" max="400" value="100"></p>
         <p><button type="button" onclick="launch()">Launch</button></p>
     <script>
         function launch() {
             var zoom = parseFloat(document.getElementById("zoom").value);
-            var trackerWidth = Math.round(490 * zoom / 100);
-            var trackerHeight = Math.round(480 * zoom / 100);
+            var trackerWidth = Math.round(500 * zoom / 100);
+            var trackerHeight = Math.round(500 * zoom / 100);
             open("tracker.html","",
                  "width=" + trackerWidth + ",height=" + trackerHeight +
                  ",titlebar=0,menubar=0,toolbar=0,scrollbars=0,resizable=0");

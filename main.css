@@ -2,11 +2,6 @@ body {
     background-color: black;
 }
 
-.grid-container {
-    display: grid;
-    grid-gap: 10px;
-}
-
 img {
     -khtml-user-drag: none;
     user-select: none;
@@ -16,54 +11,107 @@ img {
     -ms-user-select: none;
 }
 
+.global-container {
+    height: 0;
+    overflow: hidden;
+    padding-top: 100%;
+    position: relative;
+    margin: 1%;
+}
+
+.global-container-inside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 66% 1% 33%;
+    grid-template-rows: 18% 18% 15% 19% 30%;
+    grid-gap: 0%;
+}
+
 .y-items {
-    width: 300px;
+    position: relative;
+    float: left;
     grid-column: 1;
-    grid-row: 1 / span 4;
+    grid-row: 1 / span 3;
+}
+
+.a-items {
+    position: relative;
+    float: left;
+    grid-column: 1;
+    grid-row: 4;
+}
+
+.go {
+    position: relative;
+    float: right;
+    grid-column: 3;
+    grid-row: 1;
+    margin-top: 0%;
+    margin-left: 0%;
+}
+
+.aga {
+    position: relative;
+    float: right;
+    grid-column: 3;
+    grid-row: 2;
+    margin-top: 0%;
+    margin-left: 0%;
+}
+
+.equipment {
+    position: relative;
+    float: right;
+    grid-column: 3;
+    grid-row: 3 / span 2;
+}
+
+.dungeons {
+    position: relative;
+    float: bottom;
+    grid-column: 1 / span 3;
+    grid-row: 5;
 }
 
 .y-items-table {
     width: 100%;
-    margin: 6px;
+    margin: 10px 6px 6px;
     border-spacing: 6px;
     border-image-source: url(res/borders/y-items-border.png);
     border-image-slice: 25%;
     border-image-width: 12px;
-    border-image-outset: 10px;
+    border-image-outset: 10px 6px 6px;
     border-image-repeat: round;
-}
-
-.y, .a {
-    height: 80%;
-    width: 80%;
-}
-
-.y-items td, .a-items td .equipment td {
-    text-align: center;
-    vertical-align: middle;
-}
-
-.a-items {
-    width: 300px;
-    grid-column: 1;
-    grid-row: 5;
 }
 
 .a-items-table {
     width: 100%;
-    margin: 6px;
-    border-spacing: 18px 6px;
-    border-image-source: url(res/borders/a-items-border.png);
+    margin: 10px 6px 6px;
+    border-spacing: 6px;
+    border-image: url(res/borders/a-items-border.png);
     border-image-slice: 25%;
     border-image-width: 12px;
-    border-image-outset: 10px;
+    border-image-outset: 10px 6px 6px;
     border-image-repeat: round;
 }
 
-.dungeons {
-    width: 100%;
-    grid-column: 1 / span 2;
-    grid-row: 6;
+.equipment-table {
+    width: 87%;
+    margin: 10px 6px 6px;
+    border-spacing: 6px;
+    border-image: url(res/borders/equipment-border.png) round;
+    border-image-slice: 25%;
+    border-image-width: 12px;
+    border-image-outset: 10px 6px 6px;
+    align-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .dungeons-table {
@@ -72,8 +120,24 @@ img {
     width: 100%;
 }
 
+.y {
+    width: 80%;
+}
+
+.a {
+    width: 62%;
+}
+
+.y-items td, .a-items td, .equipment td {
+    text-align: center;
+}
+
+.dungeons-table tr {
+    width: 100%;
+}
+
 .dungeons-table td {
-    width: 40px;
+    width: 10%;
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+/Edge */
@@ -98,47 +162,23 @@ img {
     width: 70%;
 }
 
-.go {
-    grid-column: 2;
-    grid-row: 1 / span 1;
-    margin-top: 10px;
-    margin-left: 51px;
-}
-
 .gomode {
-    width: 50px;
-    height: 50px;
-}
-
-.aga {
-    grid-column: 2;
-    grid-row: 2 / span 1;
-    margin-top: 10px;
-    margin-left: 38px;
+    margin-left: 5%;
+    width: 35%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .aga-img {
-    width: 75px;
-    height: 96px;
-}
-
-.equipment {
-    width: 140px;
-    grid-column: 2;
-    grid-row: 3 / span 3;
-}
-
-.equipment-table {
-    width: 100%;
-    margin: 6px;
-    margin-top: 20px;
-    border-spacing: 7px 3px;
-    border-image-source: url(res/borders/equipment-border.png);
-    border-image-slice: 25%;
-    border-image-width: 12px;
-    border-image-outset: 10px;
-    border-image-repeat: round;
-    align-content: center;
+    margin-left: 5%;
+    margin-top: 4%;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .equip {
