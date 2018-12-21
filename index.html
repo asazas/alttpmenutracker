@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>ALTTP Menu Tracker Launcher</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
 
-        <p>Base resolution (px): 500x500</p>
-        <p>Zoom (%): <input type="number" id="zoom" min="1" max="400" value="100"></p>
-        <p><button type="button" onclick="launch()">Launch</button></p>
+    <p>Base resolution (px): 500x500</p>
+    <p>Zoom (%): <input type="number" id="zoom" min="1" max="400" value="100"></p>
+    <p><input type="checkbox" id="retro" value="retro">Retro mode chest count</p>
+    <p><button type="button" onclick="launch()">Launch</button></p>
     <script>
         function launch() {
             var zoom = parseFloat(document.getElementById("zoom").value);
             var trackerWidth = Math.round(500 * zoom / 100);
             var trackerHeight = Math.round(500 * zoom / 100);
-            open("tracker.html","",
-                 "width=" + trackerWidth + ",height=" + trackerHeight +
-                 ",titlebar=0,menubar=0,toolbar=0,scrollbars=0,resizable=0");
+            var retroMode = document.getElementById("retro").checked;
+            open("tracker.html?retro={retro}".replace("{retro}", retroMode), "",
+                "width=" + trackerWidth + ",height=" + trackerHeight +
+                ",titlebar=0,menubar=0,toolbar=0,scrollbars=0,resizable=0");
         }
     </script>
 </body>
+
 </html>

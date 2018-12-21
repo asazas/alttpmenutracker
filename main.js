@@ -115,6 +115,16 @@ function toggleAga() {
 
 function init() {
 
+    var retro = getParameterByName("retro");
+    if (retro === "true") {
+        var max_states = [3, 3, 3, 11, 7, 4, 5, 5, 5, 9];
+        var els = document.getElementsByClassName("chest");
+        for (let i = 0; i < els.length; i++) {
+            els[i].setAttribute("data-max-state", max_states[i]);
+            els[i].src = "res/chest/chest-" + max_states[i] + ".png";
+        }
+    }
+
     var els = document.getElementsByTagName("img");
     for (let i = 0; i < els.length; i++) {
         els[i].setAttribute("draggable", "false");
@@ -150,4 +160,14 @@ function init() {
     for (let i = 0; i < els.length; i++) {
         els[i].setAttribute("data-state", "0");
     }
+}
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
