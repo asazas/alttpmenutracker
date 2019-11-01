@@ -7,12 +7,12 @@ function toggle(id) {
             item.style.opacity = 1;
             state = 1;
         } else {
-            item.style.opacity = 0.13;
+            item.style.opacity = 0.25;
             state = 0;
         }
     } else {
         if (state === max_state) {
-            item.style.opacity = 0.13;
+            item.style.opacity = 0.25;
             state = 0;
         } else {
             item.style.opacity = 1;
@@ -133,7 +133,7 @@ function init() {
 
     var els = document.getElementsByClassName("item");
     for (let i = 0; i < els.length; i++) {
-        els[i].style.opacity = 0.13;
+        els[i].style.opacity = 0.25;
         els[i].setAttribute("data-state", "0");
     }
 
