@@ -12,15 +12,24 @@
 
     <p>Base resolution (px): 500x500</p>
     <p>Zoom (%): <input type="number" id="zoom" min="1" max="400" value="100"></p>
-    <p><input type="checkbox" id="retro" value="retro">Retro mode chest count</p>
+    <p><input type="radio" id="mode1" name="mode" value="normal" checked>Regular chest count</p>
+    <p><input type="radio" id="mode2" name="mode" value="maps">Map/compass shuffle chest count</p>
+    <p><input type="radio" id="mode3" name="mode" value="retro">Retro mode chest count</p>
     <p><button type="button" onclick="launch()">Launch</button></p>
     <script>
         function launch() {
             var zoom = parseFloat(document.getElementById("zoom").value);
             var trackerWidth = Math.round(500 * zoom / 100);
             var trackerHeight = Math.round(500 * zoom / 100);
-            var retroMode = document.getElementById("retro").checked;
-            open("tracker.html?retro={retro}".replace("{retro}", retroMode), "",
+
+            var mode = "normal";
+            if (document.getElementById("mode2").checked) {
+                mode = "maps";
+            } else if (document.getElementById("mode3").checked) {
+                mode = "retro";
+            }
+
+            open("tracker.html?mode={mode}".replace("{mode}", mode), "",
                 "width=" + trackerWidth + ",height=" + trackerHeight +
                 ",titlebar=0,menubar=0,toolbar=0,scrollbars=0,resizable=0");
         }

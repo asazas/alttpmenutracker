@@ -115,9 +115,12 @@ function toggleAga() {
 
 function init() {
 
-    var retro = getParameterByName("retro");
-    if (retro === "true") {
-        var max_states = [3, 3, 3, 11, 7, 4, 5, 5, 5, 9];
+    var mode = getParameterByName("mode");
+    if (mode !== "normal") {
+        var max_states = [5, 4, 4, 7, 8, 4, 6, 5, 4, 7];
+        if (mode === "retro") {
+            max_states = [3, 3, 3, 11, 7, 4, 5, 5, 5, 9];
+        }
         var els = document.getElementsByClassName("chest");
         for (let i = 0; i < els.length; i++) {
             els[i].setAttribute("data-max-state", max_states[i]);
