@@ -1,5 +1,6 @@
 body {
     background-color: black;
+    overflow: hidden;
 }
 
 img {
@@ -81,6 +82,7 @@ img {
     width: 100%;
     margin: 10px 6px 6px;
     border-spacing: 6px;
+    border-style: solid;
     border-image-source: url(res/borders/y-items-border.png);
     border-image-slice: 25%;
     border-image-width: 12px;
@@ -92,6 +94,7 @@ img {
     width: 100%;
     margin: 10px 6px 6px;
     border-spacing: 6px;
+    border-style: solid;
     border-image: url(res/borders/a-items-border.png);
     border-image-slice: 25%;
     border-image-width: 12px;
@@ -103,13 +106,14 @@ img {
     width: 87%;
     margin: 10px 6px 6px;
     border-spacing: 6px;
+    border-style: solid;
     border-image: url(res/borders/equipment-border.png) round;
     border-image-slice: 25%;
     border-image-width: 12px;
     border-image-outset: 10px 6px 6px;
     align-content: center;
     position: absolute;
-    top: 50%;
+    top: 53%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
